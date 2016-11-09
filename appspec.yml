@@ -6,8 +6,8 @@ files:
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
-    - timeout: 300
-    - runas: root
+      timeout: 300
+      runas: root
   ApplicationStop:
     - location: deregister_from_elb.sh
     - location: stop_httpd.sh
