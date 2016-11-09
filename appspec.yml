@@ -4,11 +4,11 @@ files:
   - source: /index.html
     destination: /var/www/html/
 hooks:
-   BeforeInstall:
+  BeforeInstall:
     - location: scripts/install_dependencies.sh
     - timeout: 300
     - runas: root
-   ApplicationStop:
+  ApplicationStop:
     - location: deregister_from_elb.sh
     - location: stop_httpd.sh
   ApplicationStart:
